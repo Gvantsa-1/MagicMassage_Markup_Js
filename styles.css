@@ -1,20 +1,36 @@
+/*fonts */
 @font-face {
-  font-family: 'Mont';
-  src: url(".fonts/Mont/Mont-Black.otf");
-  src: url("./fonts/Mont/Mont-Bold.otf");
-  src: url("./fonts/Mont/Mont-Heavy.otf");
-  src: url("./fonts/Mont/Mont-Regular.otf");
-  src: url("./fonts/Mont/Mont-SemiBold.otf");
-  src: url("./fonts/Mont/Mont-SemiBold.otf");
+  font-family: 'montLight';
+  src: url('./fonts/Mont-Light.ttf');
+}
+
+@font-face {
+  font-family: 'montRegular';
+  src: url('./fonts/Mont-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'montDark';
+  src: url('./fonts/Mont-Book.ttf');
+}
+
+@font-face {
+  font-family: 'montBold';
+  src: url('./fonts/Mont-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'montBolder';
+  src: url('./fonts/Mont-Heavy.ttf');
 }
 
 @font-face {
   font-family: 'gilroy';
-  src: url("./fonts/Gilroy/Gilroy-FREE/Gilroy-Light.otf");
-  src: url("./fonts/Gilroy/Gilroy-FREE/Gilroy-ExtraBold.otf");
+  src: url("./fonts/Gilroy-ExtraBold.otf");
 
 }
 
+/*additonal styles*/
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +38,6 @@
   list-style: none;
   outline: none;
   border: none;
-  font-family: "mont";
 }
 
 a {
@@ -31,20 +46,42 @@ a {
 
 li {
   cursor: pointer;
-
+  font-family: 'montLight';
 }
+
 
 body {
   width: 325px;
+  font-family: 'montREgular';
+  align-items: column;
+
 }
 
+button {
+  cursor: pointer;
+}
+
+/*frequently iused classes */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnAddStyles {
+  border-radius: 60px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 800;
+  font-family: 'montBold';
+}
+
+
+/*beginig of main styles*/
 .header {
   width: 100vw;
   background-color: #11346F;
   height: 39px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .header p {
@@ -81,11 +118,14 @@ ul {
 
 .darkLi {
   color: #11346F;
+  font-family: 'montDark';
+  font-weight: 700;
 }
 
 .lightLi {
   color: #11346F;
   opacity: 0.75;
+  font-family: 'montRegular';
 }
 
 .navbar button {
@@ -96,23 +136,24 @@ ul {
   width: 100vw;
   padding: 13px 14px 28px 17px;
   background-color: #F5FDFF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 section {
   flex-direction: column;
+  width: 377px;
+
 }
 
 section h3 {
-  width: 378px;
+  width: 377px;
   font-size: 14px;
   font-weight: 700;
   line-height: 22px;
   text-align: center;
+  margin: 0 auto;
   color: #262626;
   height: 60px;
+  font-family: "montDark";
 
 }
 
@@ -125,10 +166,10 @@ section h3 {
 
 .mainWrapper h1 {
   width: 213px;
-  font-weight: 700;
   font-size: 26px;
   line-height: 30px;
   color: #213786;
+  font-family: 'montDark';
 
 }
 
@@ -163,6 +204,242 @@ section h3 {
   width: 174px;
   height: 107px;
   margin-top: 23px;
+
+}
+
+.shadow {
+  width: 119px;
+  position: absolute;
+  left: 183px;
+  top: 116px
+}
+
+.shadow2 {
+  width: 119px;
+  position: absolute;
+  left: 235px;
+  top: 133px
+}
+
+.kindOfMassage {
+  display: flex;
+  width: 377px;
+  margin: 0 auto;
+}
+
+.massageBox {
+  width: 95px;
+  flex-direction: column;
+}
+
+.kindOfMassage img {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 9px;
+  align-self: center;
+}
+
+.kindOfMassage h4 {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #11346F;
+  width: 70px;
+  font-family: 'montDark';
+}
+
+.wrapperBtn {
+  flex-direction: column;
+}
+
+.getMassage {
+  width: 377px;
+  height: 63px;
+  margin-top: 21px;
+  background-color: #197AFF;
+  line-height: 21px;
+
+}
+
+.btnAboutBundles {
+  width: 228px;
+  height: 34px;
+  background-color: #4D91CF26;
+  margin: 16px 0;
+  border-radius: 30px;
+  font-family: 'montRegular';
+  color: #000000;
+}
+
+b {
+  color: #197AFF;
+  font-family: "montBold";
+}
+
+.recommendation {
+  display: flex;
+  width: 377px;
+  height: 81px;
+  padding: 7px;
+  background: rgba(234, 242, 255, 0.1);
+  border: 1px solid rgba(174, 204, 255, 0.5);
+  border-radius: 110px;
+  padding: 9px 7px;
+  margin: 0 auto;
+}
+
+.imgReview {
+  margin-right: 12px;
+}
+
+.recommendation q {
+  color: #000000c1;
+  font-size: 12px;
+  line-height: 17px;
+  width: 235px;
+  font-family: "montBold";
+
+}
+
+.circle {
+  background: url("./assets/tick-circle.png")no-repeat 5px;
+  background-size: 15.55px 15.55px;
+
+}
+
+.stars {
+  background: url("./assets/stars.png")no-repeat 5px;
+  background-size: 73px 15.55px;
+  display: inline;
+
+}
+
+.debra {
+  margin-left: 85px;
+  color: #787979c1;
+  font-family: "montBold";
+  font-size: 12px;
+}
+
+.footWrapper {
+  margin-top: 7px;
+}
+
+.footWrapper span {
+  margin-left: 28px;
+  color: #197AFF;
+  font-family: 'montBolder';
+  font-size: 11px;
+  line-height: 14.61px;
+
+}
+
+/*responsive */
+@media screen and (min-width: 512px) {
+  section {
+    width: 490px;
+  }
+
+  section h3 {
+    width: 490px;
+  }
+
+  .mainWrapper h1 {
+    width: 280px;
+    padding-top: 15px;
+  }
+
+  .arrowMobile {
+    left: 150px;
+    top: 70px
+  }
+
+  .shadow {
+    left: 298px;
+    top: 120px
+  }
+
+  .shadow2 {
+    left: 355px;
+    top: 133px
+  }
+
+  .kindOfMassage {
+    width: 490px;
+  }
+
+  .massageBox {
+    width: 122px;
+  }
+
+  .getMassage {
+    width: 490px
+  }
+
+  .btnAboutBundles {
+    width: 248px;
+  }
+
+  .recommendation {
+    width: 393px;
+  }
+}
+
+@media screen and (min-width: 632px) {
+  section {
+    width: 600px;
+  }
+
+  section h3 {
+    width: 600px;
+  }
+
+  .mainWrapper h1 {
+    width: 340px;
+  }
+
+  .arrowMobile {
+    left: 210px;
+    top: 80px
+  }
+
+  .ImgTwoMassagers {
+    width: 184px;
+    height: 117px;
+    margin-right: 43px;
+
+  }
+
+  .shadow {
+    left: 348px;
+    top: 130px
+  }
+
+  .shadow2 {
+    left: 405px;
+    top: 143px
+  }
+
+  .kindOfMassage {
+    width: 600px;
+  }
+
+  .massageBox {
+    width: 150px;
+  }
+
+  .getMassage {
+    width: 600px
+  }
+
+  .btnAboutBundles {
+    width: 255px;
+  }
+
+  .recommendation {
+    width: 393px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -200,13 +477,90 @@ section h3 {
     width: 165px;
     height: 42px;
     background-color: #197AFF;
-    border-radius: 60px;
-    cursor: pointer;
-    color: #ffffff;
-    font-weight: 800;
     font-size: 14px;
   }
 
+  section {
+    width: 740px;
+
+  }
+
+  section h3 {
+    width: 750px;
+  }
+
+  .mainWrapper h1 {
+    padding-left: 20px;
+    font-size: 30px;
+  }
+
+  .arrowMobile {
+    left: 260px;
+  }
+
+  .ImgTwoMassagers {
+    width: 204px;
+    height: 137px;
+    margin-right: 73px;
+    margin-top: 0;
+
+  }
+
+  .shadow {
+    left: 458px;
+  }
+
+  .shadow2 {
+    left: 525px;
+  }
+
+  .kindOfMassage {
+    width: 750px;
+  }
+
+  .massageBox {
+    width: 185px;
+  }
+
+}
+
+@media screen and (min-width: 890px) {
+
+  section {
+    width: 890px;
+
+  }
+
+  .mainWrapper h1 {
+    font-size: 35px;
+    width: 500px;
+  }
+
+  .arrowMobile {
+    left: 320px;
+  }
+
+  .ImgTwoMassagers {
+    width: 224px;
+    height: 157px;
+    margin-right: 93px;
+  }
+
+  .shadow {
+    display: none;
+  }
+
+  .shadow2 {
+    display: none;
+  }
+
+  .kindOfMassage {
+    width: 890px;
+  }
+
+  .massageBox {
+    width: 200px;
+  }
 }
 
 @media screen and (min-width: 1028px) {
