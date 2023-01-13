@@ -35,7 +35,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
   outline: none;
   border: none;
 }
@@ -51,9 +50,12 @@ li {
 
 
 body {
-  width: 325px;
-  font-family: 'montREgular';
+  justify-content: center;
+  font-family: 'montRegular';
   align-items: column;
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0 auto;
 
 }
 
@@ -61,7 +63,7 @@ button {
   cursor: pointer;
 }
 
-/*frequently iused classes */
+/*frequently used classes */
 .center {
   display: flex;
   justify-content: center;
@@ -103,12 +105,14 @@ button {
 
 nav {
   display: none;
+
 }
 
 ul {
   width: 520px;
   display: flex;
   justify-content: space-between;
+  list-style: none;
 }
 
 .mainLogo {
@@ -173,7 +177,7 @@ section h3 {
 
 }
 
-.mainWrapper p {
+.mainWrapper span {
   color: #197AFF;
   font-family: "gilroy";
   letter-spacing: 1px;
@@ -183,7 +187,7 @@ section h3 {
   position: relative;
 }
 
-.mainWrapper p:after {
+.mainWrapper span:after {
   content: "";
   width: 97px;
   height: 6px;
@@ -191,7 +195,6 @@ section h3 {
   position: absolute;
   top: 39px;
   left: -5px;
-
 }
 
 .arrowMobile {
@@ -200,11 +203,18 @@ section h3 {
   top: 85px
 }
 
+.arrowDesktop {
+  display: none;
+}
+
 .ImgTwoMassagers {
   width: 174px;
   height: 107px;
   margin-top: 23px;
+}
 
+.ImgTwoMassagers-2 {
+  display: none;
 }
 
 .shadow {
@@ -239,6 +249,10 @@ section h3 {
   align-self: center;
 }
 
+.kindOfMassage ul {
+  display: none;
+}
+
 .kindOfMassage h4 {
   font-weight: 700;
   font-size: 12px;
@@ -259,7 +273,7 @@ section h3 {
   margin-top: 21px;
   background-color: #197AFF;
   line-height: 21px;
-
+  font-size: 16px;
 }
 
 .btnAboutBundles {
@@ -270,6 +284,7 @@ section h3 {
   border-radius: 30px;
   font-family: 'montRegular';
   color: #000000;
+  font-size: 13px;
 }
 
 b {
@@ -332,8 +347,311 @@ b {
   font-family: 'montBolder';
   font-size: 11px;
   line-height: 14.61px;
+}
+
+.cardHead {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 101px;
+  background-color: #11346F;
+  justify-content: space-evenly;
+}
+
+.cardHead h2 {
+  display: none;
+}
+
+.cardHeadBox,
+.cardHeadBox-2 {
+  display: block;
+  width: 155px;
+  height: 100px;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.cardHeadImg-3 {
+  background-color: white;
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
 
 }
+
+.cardHeadBox-3 {
+  display: none;
+}
+
+.cardHeadBox h3,
+.cardHeadBox-2 h3 {
+  margin-top: 4px;
+  width: 115px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+  font-family: "montBold";
+
+}
+
+.cardContainer {
+  background: linear-gradient(118.72deg, #AECCFF -18.14%, #197AFF 165.34%);
+  padding: 19px 18px 63px 18px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardContainer h1 {
+  color: #11346F;
+  font-size: 30px;
+  font-family: 'montDark';
+}
+
+.cardContainer h2 {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: 'gilroy';
+  margin-bottom: 6px;
+}
+
+.card,
+.card-2,
+.card-3 {
+  min-width: 350px;
+  width: 80%;
+  max-width: 600px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #D7E6FF 100%);
+  border: 1.5px solid #197AFF;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card {
+  height: 468px;
+  margin: 70px 0;
+}
+
+.card-2 {
+  height: 455px;
+  margin-bottom: 41px;
+}
+
+.card-3 {
+  height: 387px;
+}
+
+
+.cardImg2 {
+  position: absolute;
+  top: -40px;
+}
+
+.cardImg {
+  position: absolute;
+  top: -30px;
+}
+
+.arrowWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0;
+  position: relative;
+}
+
+.cardArrow {
+  position: absolute;
+  top: 0px;
+  left: 120px;
+}
+
+.card h4 {
+  background-color: #57AC73;
+  width: 126px;
+  height: 28px;
+  color: #ffffff;
+  margin-top: 60px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "montDark";
+}
+
+.card-2 h4 {
+  background-color: #AC5780;
+  width: 100px;
+  height: 28px;
+  color: #ffffff;
+  margin-top: 60px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "montDark";
+}
+
+.card h2,
+.card-2 h2,
+.card-3 h2 {
+  font-size: 24px;
+  line-height: 29px;
+  color: #11346F;
+  font-family: "montDark";
+  margin-top: 11px;
+}
+
+.card span,
+.card-2 span {
+  font-size: 24px;
+  line-height: 30px;
+  color: #197AFF;
+  font-family: "gilroy";
+  position: relative;
+
+}
+
+.card .underline:after,
+.card-2 .underline:after {
+  content: "";
+  width: 139px;
+  height: 6px;
+  background: url("./assets/underline-2.svg") no-repeat;
+  position: absolute;
+  top: 34px;
+  left: -18px;
+}
+
+.card p,
+.card-2 p,
+.card-3 p {
+  display: none;
+}
+
+.card h5,
+.card-2 h5,
+.card-3 h5 {
+  font-size: 11px;
+  color: #11346F;
+  font-family: 'montDark';
+  margin-top: 16px;
+  align-items: baseline;
+  margin-bottom: 23px;
+}
+
+.card strong,
+.card-2 strong,
+.card-3 strong {
+  font-family: 'montBolder';
+}
+
+.afterpayLogo {
+  background: url("./assets/aftrepay.png")no-repeat -25px -1px;
+  background-color: #BCF5E3;
+  border-radius: 40px;
+  margin-left: 15px;
+  border: 12px solid transparent;
+  border-width: 8px 50px;
+
+}
+
+.inputWrapper {
+  width: 360px;
+  height: 80px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #D7E6FF 100%);
+  border: 1.5px solid #AECCFF;
+  border-radius: 18px;
+  margin-bottom: 21px;
+  position: relative;
+}
+
+
+.inputWrapper .aboutSave {
+  width: 180.2px;
+  height: 36px;
+  background: #BFF5BE;
+  border: 1px solid #99D298;
+  border-radius: 48px;
+  position: absolute;
+  left: -2px;
+  top: -5px;
+  color: #11346F;
+  font-family: "gilroy";
+  font-size: 12px;
+  z-index: 5;
+}
+
+.inputWrapper .aboutPrice {
+  width: 222px;
+  height: 36px;
+  background: #F0F6FF;
+  border: 1px solid #AECCFF;
+  border-radius: 80px;
+  position: absolute;
+  right: -2px;
+  top: -5px;
+  color: #11346F;
+  font-family: "gilroy";
+  font-size: 12px;
+}
+
+.order {
+  width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 50px;
+  margin: 45px;
+  padding: 0 13%;
+}
+
+.order h6 {
+  color: #11346F;
+  font-family: "gilroy";
+  font-size: 12px;
+  margin-left: 7px;
+}
+
+.card button,
+.card-2 button,
+.card-3 button {
+  width: 353px;
+  height: 48px;
+  background: #197AFF;
+  box-shadow: 0px 7px 14px rgba(25, 122, 255, 0.5);
+  border-radius: 60px;
+  margin-bottom: 16px;
+}
+
+.payMethod {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 16.64px;
+
+}
+
+.card .price,
+.card-2 .price,
+.card-3 .price-3 {
+  color: #11346F;
+  font-size: 24px;
+  font-family: "gilroy";
+  margin: 14px 0 0px 0;
+}
+
+.price-3 {
+  margin: 10px 0 !important;
+}
+
+.removedPrice {
+  color: #93A2BB;
+  font-family: "gilroy";
+  font-size: 25px;
+}
+
 
 /*responsive */
 @media screen and (min-width: 512px) {
@@ -351,7 +669,7 @@ b {
   }
 
   .arrowMobile {
-    left: 150px;
+    left: 170px;
     top: 70px
   }
 
@@ -400,7 +718,7 @@ b {
   }
 
   .arrowMobile {
-    left: 210px;
+    left: 230px;
     top: 80px
   }
 
@@ -430,7 +748,8 @@ b {
   }
 
   .getMassage {
-    width: 600px
+    width: 600px;
+    margin-top: 20px;
   }
 
   .btnAboutBundles {
@@ -495,7 +814,7 @@ b {
   }
 
   .arrowMobile {
-    left: 260px;
+    left: 290px;
   }
 
   .ImgTwoMassagers {
@@ -534,16 +853,26 @@ b {
   .mainWrapper h1 {
     font-size: 35px;
     width: 500px;
+    line-height: 42px;
+  }
+
+  .mainWrapper span {
+    letter-spacing: 0px;
+    font-size: 35px;
   }
 
   .arrowMobile {
-    left: 320px;
+    left: 390px;
   }
 
   .ImgTwoMassagers {
     width: 224px;
     height: 157px;
     margin-right: 93px;
+  }
+
+  .mainWrapper span:after {
+    top: 49px;
   }
 
   .shadow {
@@ -563,7 +892,7 @@ b {
   }
 }
 
-@media screen and (min-width: 1028px) {
+@media screen and (min-width: 1175px) {
   ul {
     width: 520px;
     display: flex;
@@ -574,4 +903,224 @@ b {
     margin-right: 150px;
   }
 
+  .container {
+    background-color: #FBFBFB;
+    padding: 30px 50px;
+
+  }
+
+  section {
+    width: 100vw;
+  }
+
+  .mainWrapper {
+    height: 80px;
+  }
+
+  .mainWrapper h1 {
+    width: 100vw;
+    font-size: 42px;
+    line-height: 55px;
+  }
+
+  .mainWrapper span:after {
+    width: 171px;
+    background: url("./assets/underline-2.svg") no-repeat;
+    top: 58px;
+    left: -20px;
+  }
+
+  section h3 {
+    width: 731px;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    text-align: start;
+    margin: 0 20px;
+  }
+
+  .mainWrapper span {
+    letter-spacing: 0px;
+    font-size: 42px;
+    position: relative;
+  }
+
+  .arrowMobile {
+    display: none;
+  }
+
+  .arrowDesktop {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 920px;
+  }
+
+  .ImgTwoMassagers {
+    display: none;
+  }
+
+  .sectionWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+  }
+
+  .ImgTwoMassagers-2 {
+    display: flex;
+    width: 391px;
+    height: 241px;
+  }
+
+  .kindOfMassage {
+    width: 686px;
+    height: 152px;
+    margin: 28px 20px;
+    background: rgba(174, 204, 255, 0.1);
+    border: 1px solid rgba(174, 204, 255, 0.5);
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  .massageBox {
+    position: relative;
+  }
+
+  .line :after {
+    content: "";
+    position: absolute;
+    border: 0.1px solid #CEE2FF;
+    height: 110px;
+    z-index: 1;
+    top: 20px;
+    left: 1%;
+    padding: 0;
+  }
+
+  .kindOfMassage img {
+    margin-top: 19px;
+  }
+
+  .kindOfMassage ul {
+    display: block;
+    width: 154px;
+    height: 60px;
+    font-size: 12px;
+    color: #262626;
+    text-align: center;
+  }
+
+  .kindOfMassage li {
+    font-family: 'montDark';
+  }
+
+  .wrapperBtn {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    width: 408px;
+  }
+
+  .getMassage {
+    width: 408px;
+    margin-top: 0px;
+    line-height: 24px;
+    font-size: 18px;
+  }
+
+  .btnAboutBundles {
+    width: 255px;
+    height: 34px;
+    margin: 16px auto;
+    font-size: 15px;
+  }
+
+  .recommendation {
+    width: 393px;
+    margin: 0 50px;
+    float: right;
+  }
+
+  .cardHead {
+    height: 97px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cardHead h2 {
+    display: flex;
+    font-size: 16px;
+    line-height: 30px;
+    color: #ffffff;
+    font-family: 'montBold';
+  }
+
+  .cardHead img {
+    width: 50px;
+    margin-right: 16px;
+
+  }
+
+  .cardHeadImg-3 {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
+
+  .cardHeadBox,
+  .cardHeadBox-2,
+  .cardHeadBox-3 {
+    display: flex;
+    width: 480px;
+    height: 60px;
+    padding: 0px 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardHeadBox h3,
+  .cardHeadBox-2 h3 {
+    display: none;
+  }
+
+
+}
+
+@media screen and (min-width: 1340px) {
+  section {
+    width: 100vw;
+    padding: 0 5%;
+  }
+
+}
+
+@media screen and (min-width: 1500px) {
+  section {
+    width: 100vw;
+    padding: 0 8%;
+  }
+
+}
+
+@media screen and (min-width: 1600px) {
+  section {
+    width: 100vw;
+    padding: 0 10%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  section {
+    width: 100vw;
+    padding: 0 12%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  section {
+    width: 100vw;
+    padding: 0 15%;
+  }
 }
