@@ -27,7 +27,6 @@
 @font-face {
   font-family: 'gilroy';
   src: url("./fonts/Gilroy-ExtraBold.otf");
-
 }
 
 /*additonal styles*/
@@ -52,11 +51,8 @@ li {
 body {
   justify-content: center;
   font-family: 'montRegular';
-  align-items: column;
+  flex-direction: column;
   overflow-x: hidden;
-  width: 100vw;
-  margin: 0 auto;
-
 }
 
 button {
@@ -81,7 +77,7 @@ button {
 
 /*beginig of main styles*/
 .header {
-  width: 100vw;
+  width: 100%;
   background-color: #11346F;
   height: 39px;
 }
@@ -94,7 +90,7 @@ button {
 }
 
 .navbar {
-  width: 100vw;
+  width: 100%;
   height: 52px;
   display: flex;
   align-items: center;
@@ -137,7 +133,7 @@ ul {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   padding: 13px 14px 28px 17px;
   background-color: #F5FDFF;
 }
@@ -149,7 +145,7 @@ section {
 }
 
 section h3 {
-  width: 377px;
+  width: 360px;
   font-size: 14px;
   font-weight: 700;
   line-height: 22px;
@@ -169,7 +165,7 @@ section h3 {
 }
 
 .mainWrapper h1 {
-  width: 213px;
+  width: 193px;
   font-size: 26px;
   line-height: 30px;
   color: #213786;
@@ -187,7 +183,7 @@ section h3 {
   position: relative;
 }
 
-.mainWrapper span:after {
+.mainWrapper .underlineMagic:after {
   content: "";
   width: 97px;
   height: 6px;
@@ -233,7 +229,7 @@ section h3 {
 
 .kindOfMassage {
   display: flex;
-  width: 377px;
+  width: 350px;
   margin: 0 auto;
 }
 
@@ -259,7 +255,7 @@ section h3 {
   line-height: 15px;
   text-align: center;
   color: #11346F;
-  width: 70px;
+  width: 68px;
   font-family: 'montDark';
 }
 
@@ -268,7 +264,7 @@ section h3 {
 }
 
 .getMassage {
-  width: 377px;
+  width: 350px;
   height: 63px;
   margin-top: 21px;
   background-color: #197AFF;
@@ -294,9 +290,8 @@ b {
 
 .recommendation {
   display: flex;
-  width: 377px;
+  width: 355px;
   height: 81px;
-  padding: 7px;
   background: rgba(234, 242, 255, 0.1);
   border: 1px solid rgba(174, 204, 255, 0.5);
   border-radius: 110px;
@@ -352,7 +347,7 @@ b {
 .cardHead {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100%;
   height: 101px;
   background-color: #11346F;
   justify-content: space-evenly;
@@ -391,13 +386,13 @@ b {
   line-height: 18px;
   color: #ffffff;
   font-family: "montBold";
-
 }
 
 .cardContainer {
+  overflow: hidden;
   background: linear-gradient(118.72deg, #AECCFF -18.14%, #197AFF 165.34%);
   padding: 19px 18px 63px 18px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -407,6 +402,7 @@ b {
   color: #11346F;
   font-size: 30px;
   font-family: 'montDark';
+  text-align: center;
 }
 
 .cardContainer h2 {
@@ -419,8 +415,7 @@ b {
 .card,
 .card-2,
 .card-3 {
-  min-width: 350px;
-  width: 80%;
+  width: 350px;
   max-width: 600px;
   background: linear-gradient(180deg, #FFFFFF 0%, #D7E6FF 100%);
   border: 1.5px solid #197AFF;
@@ -511,7 +506,6 @@ b {
   color: #197AFF;
   font-family: "gilroy";
   position: relative;
-
 }
 
 .card .underline:after,
@@ -525,9 +519,9 @@ b {
   left: -18px;
 }
 
-.card p,
-.card-2 p,
-.card-3 p {
+.freeShipping,
+.freeShipping-3,
+.freeShipping-2 {
   display: none;
 }
 
@@ -552,14 +546,14 @@ b {
   background: url("./assets/aftrepay.png")no-repeat -25px -1px;
   background-color: #BCF5E3;
   border-radius: 40px;
-  margin-left: 15px;
+  margin-left: 5px;
   border: 12px solid transparent;
   border-width: 8px 50px;
 
 }
 
 .inputWrapper {
-  width: 360px;
+  width: 335px;
   height: 80px;
   background: linear-gradient(180deg, #FFFFFF 0%, #D7E6FF 100%);
   border: 1.5px solid #AECCFF;
@@ -567,7 +561,6 @@ b {
   margin-bottom: 21px;
   position: relative;
 }
-
 
 .inputWrapper .aboutSave {
   width: 180.2px;
@@ -585,7 +578,7 @@ b {
 }
 
 .inputWrapper .aboutPrice {
-  width: 222px;
+  width: 180px;
   height: 36px;
   background: #F0F6FF;
   border: 1px solid #AECCFF;
@@ -599,12 +592,10 @@ b {
 }
 
 .order {
-  width: 100vw;
+  width: 100%;
   display: flex;
-  align-items: flex-end;
-  margin-top: 50px;
   margin: 45px;
-  padding: 0 13%;
+  padding: 0 10% 0 10%;
 }
 
 .order h6 {
@@ -617,12 +608,13 @@ b {
 .card button,
 .card-2 button,
 .card-3 button {
-  width: 353px;
+  width: 325px;
   height: 48px;
   background: #197AFF;
   box-shadow: 0px 7px 14px rgba(25, 122, 255, 0.5);
   border-radius: 60px;
   margin-bottom: 16px;
+
 }
 
 .payMethod {
@@ -652,9 +644,217 @@ b {
   font-size: 25px;
 }
 
+.review {
+  background-color: #F6F8FC;
+  width: 100%;
+  padding: 28px 16px;
+  overflow-x: hidden;
+}
+
+.review h1 {
+  font-size: 28px;
+  color: #11346F;
+  width: 382px;
+  text-align: center;
+  font-family: 'montDark';
+}
+
+.review span {
+  color: #197AFF;
+  font-family: "gilroy";
+  position: relative;
+}
+
+.review .underline3:after {
+  content: "";
+  width: 165px;
+  height: 6px;
+  background: url("./assets/underline-2.svg") no-repeat;
+  position: absolute;
+  top: 46px;
+  left: -18px;
+}
+
+.reviewWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 17px;
+}
+
+.totalReview {
+  color: #11346F;
+  font-family: "montBold";
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.totalReviewStars {
+  color: #11346F;
+  font-family: "montBold";
+  font-size: 14px;
+  margin-top: 5px;
+  width: 700px;
+}
+
+.reviewContainer {
+  display: flex;
+  gap: 13px;
+  margin-left: 540px;
+}
+
+.reviewCardOne,
+.reviewCardTwo,
+.reviewCardThree,
+.reviewCardFour {
+  width: 285px;
+  height: 434px;
+  background: #FFFFFF;
+  border: 1px solid #E9E9E9;
+  border-radius: 10px;
+  margin-bottom: 22px;
+}
+
+.reviewCardFour {
+  display: none;
+}
+
+.wrapper {
+  display: block;
+}
+
+.reviewBtn {
+  width: 133px;
+  height: 30px;
+  color: #3A3075;
+  background: #F6F8FC;
+  border: 1px solid #213786;
+  border-radius: 5px;
+  position: absolute;
+  right: 4%;
+}
+
+.reviewWrapper-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 0 17px;
+}
+
+.reviewWrapper-2 span {
+  font-size: 11px;
+  color: #89C25F;
+  margin-left: 35px;
+}
+
+.circle2 {
+  background: url("./assets/greencircle.png")no-repeat 12px -2px;
+  height: 20px;
+}
+
+.starsReview {
+  margin: 6px 0 10px 0;
+  padding-left: 16px;
+}
+
+.reviewCardOne p,
+.reviewCardTwo p,
+.reviewCardThree p,
+.reviewCardFour p {
+  padding: 0 18px 16px 17px;
+  font-size: 13px;
+  line-height: 26px;
+  color: #262626;
+}
+
+.activeCard,
+.activeCard2,
+.activeCard3 {
+  width: 14px;
+  height: 14px;
+  background-color: #CBCED6;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.faq {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #11346F;
+  flex-direction: column;
+  color: #ffffff;
+  padding: 25px 0;
+}
+
+.faq h1 {
+  font-size: 30px;
+  line-height: 47px;
+  width: 260px;
+  text-align: center;
+  font-family: 'montDark';
+}
+
+.faq span {
+  font-family: "gilroy";
+}
+
+.faqContainer {
+  margin-top: 38px;
+  padding: 0 1.5%;
+  text-align: center;
+}
+
+.faqImageMain {
+  margin-bottom: 24px;
+}
+
+.questionOne,
+.questionTwo,
+.questionThree,
+.questionFour {
+  margin: 0 auto;
+  align-self: center;
+  background-color: #31548E;
+  width: 360px;
+  height: 59px;
+  padding: 10px 14px;
+  text-align: start;
+
+}
+
+.answerOne {
+  background-color: #11346F;
+  color: #AECCFF;
+}
+
+.answerTwo,
+.answerThree,
+.answerFour {
+  display: none;
+}
 
 /*responsive */
+@media screen and (min-width:400px) {
+  .reviewContainer {
+    gap: 13px;
+    margin-left: 500px;
+  }
+}
+
+@media screen and (min-width:440px) {
+  .reviewContainer {
+    gap: 16px;
+    margin-left: 460px;
+  }
+}
+
 @media screen and (min-width: 512px) {
+  .reviewContainer {
+    gap: 23px;
+    margin-left: 400px;
+  }
+
   section {
     width: 490px;
   }
@@ -702,6 +902,37 @@ b {
   .recommendation {
     width: 393px;
   }
+
+  .afterpayLogo {
+    margin-left: 16px;
+  }
+
+  .card,
+  .card-2,
+  .card-3 {
+    width: 397px;
+  }
+
+  .inputWrapper {
+    width: 377px;
+  }
+
+  .inputWrapper .aboutPrice {
+    width: 222px;
+  }
+
+  .order {
+    width: 100%;
+    margin: 45px;
+    padding: 0 13%;
+  }
+
+  .card button,
+  .card-2 button,
+  .card-3 button {
+    width: 377px;
+  }
+
 }
 
 @media screen and (min-width: 632px) {
@@ -759,11 +990,52 @@ b {
   .recommendation {
     width: 393px;
   }
+
+  .card,
+  .card-2,
+  .card-3 {
+    width: 450px;
+  }
+
+  .totalReviewStars {
+    margin-left: 5px;
+  }
+
+  .reviewCardOne,
+  .reviewCardTwo,
+  .reviewCardThree,
+  .reviewCardFour {
+    height: 472px;
+  }
+
+  .reviewimg {
+    height: 169px;
+  }
+
+  .reviewContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    margin-left: 0px;
+    padding: 1%;
+    justify-content: center;
+  }
+
+  .reviewCardFour {
+    display: block;
+
+  }
+
+  .activeCard,
+  .activeCard2,
+  .activeCard3 {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
   body {
-    width: 100vw;
+    width: 100%;
   }
 
   .navbar {
@@ -822,7 +1094,6 @@ b {
     height: 137px;
     margin-right: 73px;
     margin-top: 0;
-
   }
 
   .shadow {
@@ -841,13 +1112,24 @@ b {
     width: 185px;
   }
 
+  .card,
+  .card-2,
+  .card-3 {
+    width: 500px;
+  }
+
+  .review {
+    padding: 50px 50px;
+  }
+
+  .reviewContainer {
+    gap: 5%;
+  }
 }
 
 @media screen and (min-width: 890px) {
-
   section {
     width: 890px;
-
   }
 
   .mainWrapper h1 {
@@ -871,7 +1153,7 @@ b {
     margin-right: 93px;
   }
 
-  .mainWrapper span:after {
+  .mainWrapper .underlineMagic:after {
     top: 49px;
   }
 
@@ -890,6 +1172,25 @@ b {
   .massageBox {
     width: 200px;
   }
+
+  .card,
+  .card-2,
+  .card-3 {
+    width: 550px;
+  }
+
+  .review {
+    padding: 50px 120px;
+  }
+
+  .reviewContainer {
+    gap: 10%;
+  }
+
+  .reviewBtn {
+    right: 8%;
+  }
+
 }
 
 @media screen and (min-width: 1175px) {
@@ -906,11 +1207,10 @@ b {
   .container {
     background-color: #FBFBFB;
     padding: 30px 50px;
-
   }
 
   section {
-    width: 100vw;
+    width: 100%;
   }
 
   .mainWrapper {
@@ -918,16 +1218,16 @@ b {
   }
 
   .mainWrapper h1 {
-    width: 100vw;
+    width: 100%;
     font-size: 42px;
     line-height: 55px;
   }
 
-  .mainWrapper span:after {
+  .mainWrapper .underlineMagic:after {
     width: 171px;
     background: url("./assets/underline-2.svg") no-repeat;
-    top: 58px;
-    left: -20px;
+    top: 60px;
+    left: -40px;
   }
 
   section h3 {
@@ -1048,6 +1348,7 @@ b {
     justify-content: space-between;
   }
 
+
   .cardHead h2 {
     display: flex;
     font-size: 16px;
@@ -1059,7 +1360,6 @@ b {
   .cardHead img {
     width: 50px;
     margin-right: 16px;
-
   }
 
   .cardHeadImg-3 {
@@ -1085,42 +1385,245 @@ b {
     display: none;
   }
 
+  .cardContainer {
+    padding: 29px 10%;
 
+  }
+
+  .cardWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 2%;
+  }
+
+  .cardContainer h1 {
+    font-size: 37px;
+  }
+
+  .cardContainer h2 {
+    font-size: 37px;
+  }
+
+  .card,
+  .card-2,
+  .card-3 {
+    width: 368px;
+    height: 530px;
+  }
+
+  .card-2 {
+    margin-top: 40px;
+  }
+
+  .card h2,
+  .card-2 h2,
+  .card-3 h2 {
+    font-size: 24px;
+  }
+
+  .card .card span,
+  .card-2 span {
+    font-size: 30px;
+  }
+
+  .freeShipping {
+    display: flex;
+    color: #11346F;
+    font-size: 13px;
+    font-family: "montBold";
+    margin-right: 90px;
+    margin: 10px 90px 10px 0;
+  }
+
+  .freeShipping-3,
+  .freeShipping-2 {
+    display: flex;
+    color: #11346F;
+    font-size: 13px;
+    font-family: "montBold";
+  }
+
+  .freeShipping-2 {
+    margin: 20px 0 20px 0;
+
+  }
+
+  .circleImg {
+    background: url("./assets/30dayfree.png")no-repeat;
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+  }
+
+  .freeShipping-3 {
+    margin: 0px 0 30px 0;
+    align-items: baseline;
+  }
+
+  .card h5,
+  .card-2 h5,
+  .card-3 h5 {
+    font-size: 12px;
+  }
+
+  .card-3 h5 {
+    margin-bottom: 40px;
+
+  }
+
+  .afterpayLogo {
+    margin-left: 0px;
+    border-width: 8px 45px;
+  }
+
+  .inputWrapper {
+    width: 335px;
+    height: 80px;
+  }
+
+  .inputWrapper .aboutPrice {
+    width: 182px;
+    text-align: center;
+
+  }
+
+  .order {
+    padding: 0 10% 0 10%;
+  }
+
+  .card button,
+  .card-2 button,
+  .card-3 button {
+    width: 325px;
+  }
+
+  div#firstCard {
+    order: 1;
+  }
+
+  div#secondCard {
+    order: 3;
+  }
+
+  div#thirdCard {
+    order: 2;
+  }
+
+  .review h1 {
+    font-size: 37px;
+    width: 782px;
+  }
+
+  .review .underline3:after {
+    top: 56px;
+    left: -4px;
+  }
+
+  .reviewContainer {
+    display: flex;
+    gap: 1%;
+    flex-wrap: nowrap;
+  }
+
+  .wrapper {
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1340px) {
   section {
-    width: 100vw;
+    width: 100%;
     padding: 0 5%;
   }
 
+  .cardContainer {
+    padding: 29px 50px;
+  }
+
+  .cardWrapper {
+    gap: 50px;
+  }
+
+  .card,
+  .card-2,
+  .card-3 {
+    width: 368px;
+    height: 530px;
+  }
+
+
+  .card span,
+  .card-2 span {
+    font-size: 30px;
+  }
+
+  .freeShipping {
+    display: flex;
+  }
+
+  .freeShipping-3 {
+    display: flex;
+  }
+
+  .card h5,
+  .card-2 h5,
+  .card-3 h5 {
+    font-size: 12px;
+  }
+
+  .afterpayLogo {
+    margin-left: 0px;
+    border-width: 8px 45px;
+  }
+
+  .inputWrapper {
+    width: 335px;
+    height: 80px;
+  }
+
+  .inputWrapper .aboutPrice {
+    width: 182px;
+  }
+
+  .card button,
+  .card-2 button,
+  .card-3 button {
+    width: 331px;
+  }
 }
 
 @media screen and (min-width: 1500px) {
   section {
-    width: 100vw;
     padding: 0 8%;
   }
 
+  .reviewContainer {
+    gap: 5%;
+  }
 }
 
 @media screen and (min-width: 1600px) {
   section {
-    width: 100vw;
     padding: 0 10%;
+  }
+
+  .reviewContainer {
+    gap: 7%;
+  }
+
+  .reviewBtn {
+    right: 7%;
   }
 }
 
 @media screen and (min-width: 1700px) {
   section {
-    width: 100vw;
-    padding: 0 12%;
-  }
-}
-
-@media screen and (min-width: 1800px) {
-  section {
-    width: 100vw;
     padding: 0 15%;
+  }
+
+  .reviewContainer {
+    gap: 12%;
   }
 }
