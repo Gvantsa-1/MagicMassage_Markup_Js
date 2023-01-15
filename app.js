@@ -11,10 +11,6 @@ for (let i = 0; i < answer.length; i++) {
     icon[i - 1].classList.toggle("rotate");
   });
 }
-console.log(icon);
-function display() {
-  document.getElementById("myID").style.marginLeft = +165 + "px";
-}
 
 const changeSlider = (e) => {
   slidercont.style.marginLeft = `${e}%`;
