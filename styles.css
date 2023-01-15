@@ -74,6 +74,17 @@ button {
   font-family: 'montBold';
 }
 
+.answer {
+  display: none
+}
+
+.displayNone {
+  display: flex;
+}
+
+.rotate {
+  transform: rotateX(180deg);
+}
 
 /*beginig of main styles*/
 .header {
@@ -763,7 +774,7 @@ b {
 .reviewCardThree p,
 .reviewCardFour p {
   padding: 0 18px 16px 17px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 26px;
   color: #262626;
 }
@@ -800,38 +811,64 @@ b {
 }
 
 .faqContainer {
-  margin-top: 38px;
-  padding: 0 1.5%;
-  text-align: center;
+  margin: 0 auto;
+  width: 377px;
+  margin: 38px;
+  padding: 2%;
 }
 
 .faqImageMain {
   margin-bottom: 24px;
+  border-radius: 10px;
 }
 
 .questionOne,
 .questionTwo,
 .questionThree,
 .questionFour {
-  margin: 0 auto;
-  align-self: center;
-  background-color: #31548E;
   width: 360px;
   height: 59px;
   padding: 10px 14px;
   text-align: start;
-
+  width: 360px;
+  font-size: 16px;
+  font-family: 'montDark';
+  background: #194081;
+  border: 1px solid #31548E;
+  border-radius: 6px 6px 0px 0px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.answerOne {
-  background-color: #11346F;
-  color: #AECCFF;
-}
 
+
+.answerOne,
 .answerTwo,
 .answerThree,
 .answerFour {
-  display: none;
+  background-color: #11346F;
+  color: #AECCFF;
+  height: 60px;
+  padding: 9px;
+  border: 1px solid #31548E;
+  border-radius: 0px 0px 6px 6px;
+  width: 360px;
+  text-align: start;
+}
+
+.faqWrapper {
+  margin-bottom: 16px;
+}
+
+.seeAllWrapper {
+  align-items: baseline;
+}
+
+.seeAll {
+  margin-top: -32px;
+  width: 110px;
 }
 
 /*responsive */
@@ -933,6 +970,27 @@ b {
     width: 377px;
   }
 
+  .faqContainer {
+    width: 414px;
+  }
+
+  .faqImageMain {
+    width: 374px;
+  }
+
+  .questionOne,
+  .questionTwo,
+  .questionThree,
+  .questionFour {
+    width: 378px;
+  }
+
+  .answerOne,
+  .answerTwo,
+  .answerThree,
+  .answerFour {
+    width: 378px;
+  }
 }
 
 @media screen and (min-width: 632px) {
@@ -1010,6 +1068,8 @@ b {
 
   .reviewimg {
     height: 169px;
+
+
   }
 
   .reviewContainer {
@@ -1026,10 +1086,40 @@ b {
 
   }
 
+  .reviewCardOne p,
+  .reviewCardTwo p,
+  .reviewCardThree p,
+  .reviewCardFour p {
+    font-size: 13px;
+  }
+
   .activeCard,
   .activeCard2,
   .activeCard3 {
     display: none;
+  }
+
+  .faqContainer {
+    width: 514px;
+  }
+
+  .faqImageMain {
+    width: 474px;
+    height: 360px;
+  }
+
+  .questionOne,
+  .questionTwo,
+  .questionThree,
+  .questionFour {
+    width: 478px;
+  }
+
+  .answerOne,
+  .answerTwo,
+  .answerThree,
+  .answerFour {
+    width: 478px;
   }
 }
 
@@ -1125,6 +1215,7 @@ b {
   .reviewContainer {
     gap: 5%;
   }
+
 }
 
 @media screen and (min-width: 890px) {
@@ -1190,6 +1281,7 @@ b {
   .reviewBtn {
     right: 8%;
   }
+
 
 }
 
@@ -1486,7 +1578,6 @@ b {
   .inputWrapper .aboutPrice {
     width: 182px;
     text-align: center;
-
   }
 
   .order {
@@ -1530,6 +1621,58 @@ b {
   .wrapper {
     display: flex;
   }
+
+  .faq h1 {
+    font-size: 37px;
+    line-height: 50px;
+    width: 560px;
+  }
+
+  .faq span {
+    font-family: "gilroy";
+  }
+
+  .underlineFaq {
+    margin-left: 310px;
+  }
+
+  .faqContainer {
+    margin: 0 0;
+    width: 100%;
+    margin: 38px;
+    padding: 2%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .faqImageMain {
+    margin-bottom: 0px;
+    width: 476px;
+    height: 398px;
+  }
+
+  .questionOne,
+  .questionTwo,
+  .questionThree,
+  .questionFour {
+    width: 552px;
+  }
+
+  .answerOne,
+  .answerTwo,
+  .answerThree,
+  .answerFour {
+    width: 552px;
+  }
+
+  .seeAllWrapper {
+    align-items: baseline;
+  }
+
+  .seeAll {
+    margin-left: 150px;
+  }
+
 }
 
 @media screen and (min-width: 1340px) {
@@ -1591,6 +1734,25 @@ b {
   .card-2 button,
   .card-3 button {
     width: 331px;
+  }
+
+
+  .questionOne,
+  .questionTwo,
+  .questionThree,
+  .questionFour {
+    width: 652px;
+  }
+
+  .answerOne,
+  .answerTwo,
+  .answerThree,
+  .answerFour {
+    width: 652px;
+  }
+
+  .seeAll {
+    margin-left: 30px;
   }
 }
 

@@ -210,8 +210,8 @@
         </div>
         <button class="reviewBtn">Write a review</button>
       </div>
-      <div class="reviewContainer">
-        <div class="reviewCardOne">
+      <div class="reviewContainer sliderCont">
+        <div class="reviewCardOne slider" id="cardSlider">
           <img class="reviewimg" src="./assets/imageone.png" width="285px" height="149px" />
           <div class="reviewWrapper-2">
             <h4 class="totalReview">Megan K.</h4>
@@ -222,7 +222,7 @@
             do, and the massage is relaxing as it is refreshing. I feel like it has been made for my scalp! It just
             feels right.</p>
         </div>
-        <div class="reviewCardTwo">
+        <div class="reviewCardTwo slider" id="cardSlider">
           <img class="reviewimg" src="./assets/reviewtwo.png" width="285px" height="149px" />
           <div class="reviewWrapper-2">
             <h4 class="totalReview">Megan K.</h4>
@@ -233,7 +233,7 @@
             and dog also love it, they’ll sit and let me massage their scalp for hours. At first my Labrador was
             hesitant not knowing what it was, but now she gets excited as soon as I take the MagicMassage out.</p>
         </div>
-        <div class="reviewCardThree">
+        <div class="reviewCardThree slider" id="cardSlider">
           <img class="reviewimg" src="./assets/reviewthree.png" width="285px" height="149px" />
           <div class="reviewWrapper-2">
             <h4 class="totalReview">Megan K.</h4>
@@ -244,7 +244,7 @@
             was massaging it with the perfect pressure and speed. My long hair doesn't get caught in it at all, and I
             feel relaxed after using it. Best purchase I’ve made in a LONG time!</p>
         </div>
-        <div class="reviewCardFour">
+        <div class="reviewCardFour slider" id="cardSlider">
           <img class="reviewimg" src="./assets/reviewfour.png" width="285px" height="149px" />
           <div class="reviewWrapper-2">
             <h4 class="totalReview">Megan K.</h4>
@@ -258,37 +258,58 @@
         </div>
       </div>
       <div class="btnWrapper">
-        <button class="activeCard"></button>
-        <button class="activeCard2"></button>
-        <button class="activeCard3"></button>
+        <button onclick="changeSlider(155)" class="activeCard active"></button>
+        <button onclick="changeSlider(0)" class="activeCard2 active"></button>
+        <button onclick="changeSlider(-150)" class="activeCard3 active"></button>
       </div>
     </section>
     <!--section-four-->
     <div class="faq center">
       <h1> Frequently asked <span>Questions</span></h1>
-      <img src="./assets/whiteUnderline.png" width="156px" alt="underline" />
-      <div class="faqContainer"><img class="faqImageMain" src="./assets/imageone.png" width="360px" height="194px"
-          alt="imgMassage" />
-        <div class="questionOne">How long does the battery last fully charged?<img /> </div>
-        <div class="answerOne">The MagicMassage can last up to
-          6 hours when it's fully charged.</div>
-        <div class="questionTwo">Can I use it in the shower? <img /> </div>
-        <div class="answerTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Asperiores ex provident </div>
-        <div class="questionThree">What is included in the package?</div>
-        <div class="answerThree">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Asperiores ex provident <img /> </div>
-        <div class="questionFour">Is the MagicMassage designed only for the head? <img /> </div>
-        <div class="answerFour">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Asperiores ex provident </div>
+      <img class="underlineFaq" src="./assets/whiteUnderline.png" width="156px" alt="underline" />
+      <div class="faqContainer">
+        <img class="faqImageMain" src="./assets/Rectangle 1662.png" width="360px" height="194px" alt="imgMassage" />
+        <div class="faqBox">
+          <div class="faqWrapper">
+            <button class="questionOne question">
+              <p>How long does the battery last fully charged?</p><img id="faqArrow" src="./assets/faqarrow.png"
+                width="14px" />
+            </button>
+            <div class="answerOne answer">The MagicMassage can last up to
+              6 hours when it's fully charged.</div>
+          </div>
+          <div class="faqWrapper">
+            <button class="questionTwo question">
+              <p>Can I use it in the shower?</p> <img class="faqArrow" src="./assets/faqarrow.png" width="14px" />
+            </button>
+            <div class="answerTwo answer">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores ex provident </div>
+          </div>
+          <div class="faqWrapper">
+            <button class="questionThree question">
+              <p>What is included in the package?</p><img class="faqArrow" src="./assets/faqarrow.png" width="14px" />
+            </button>
+            <div class="answerThree answer">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores ex provident </div>
+          </div>
+          <div class="faqWrapper">
+            <button class="questionFour question">
+              <p>Is the MagicMassage designed only for the head?</p><img class="faqArrow" src="./assets/faqarrow.png"
+                width="14px" />
+            </button>
+            <div class="answerFour answer">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores ex provident </div>
+          </div>
+        </div>
       </div>
       <div>
-        <h3>See All FAQ</h3><span></span>
-
+        <div class="seeAllWrapper center">
+          <h3 class="seeAll">See All FAQ</h3><img class="faqArrow" src="./assets/faqarrow.png" width="14px" />
+        </div>
       </div>
     </div>
     </div>
-    <script></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
